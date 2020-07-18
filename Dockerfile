@@ -1,3 +1,4 @@
 FROM tecstub/docker-toolbox:latest
-
-RUN apk -v --update add docker
+FROM python:3.7-alpine
+RUN apk add --update --no-cache g++ gcc libxslt-dev docker
+RUN pip install terraenv
